@@ -80,7 +80,7 @@ class Check_file:
 
     def __file_extencion(self) -> str:
         """
-
+            This function will have a dictionary with the description and extension of the files, with the library we can interpret the results with stat.
         """
         tmp_file = self.__file
         file_extencion = path.splitext(tmp_file)[1]
@@ -180,6 +180,9 @@ class Check_file:
         return "Regular File"
 
     def __permisson(self):
+        """
+        In this function we will take the user constants in integer and with the bit operator and we will add them and depending on the result in decimal 1 or 0, rwx is printed
+        """
 
         permisson_file = ""
 
