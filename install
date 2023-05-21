@@ -1,0 +1,26 @@
+#!/bin/sh
+
+
+function root() {
+  if [ $EUID -ne 0 ]; then
+    echo "[!] this script should be run as superuser with the command [sudo] [!]"
+    exit 1
+  fi
+}
+
+root
+
+echo "installing..."
+sleep 2
+echo "copying the command to the path /usr/bin"
+sleep 2
+echo "give execute permissions"
+sleep 2
+chmod +x fileshow.py 
+cp fileshow.py /usr/bin/fileshow
+chmod +x /usr/bin/fileshow
+sleep 2
+clear
+echo "[*] the installation is finished, run the command, [fileshow] in your shell to verify"
+echo -e "\n Any complaint or contribution can be made on the github: @JuanPerdomo00"
+
