@@ -1,4 +1,4 @@
-# !/usr/bin/python3
+#!/usr/bin/python3
 #
 #   GOD IS FIRTS
 #   Copyright (C) <2023>  <JuanPerdomo00> <nanezomg@gmail.com>
@@ -101,6 +101,7 @@ class Check_file:
                      ".swift": "Swift Source Code",
                      ".kt": "Kotlin Source Code",
                      ".rs": "Rust Source Code",
+                     ".md": "Markdown Source Code",
                      ".go": "Go Source Code",
                      ".ts": "Typescript Source Code",
                      ".scala": "Scala Source Code",
@@ -162,7 +163,7 @@ class Check_file:
                      ".dll": "Dynamic Link Library",
                      ".apk": "Android Package File",
                      ".ttf": "TrueType Font File",
-                     ".otf": "OpenType Font file"
+                     ".otf": "OpenType Font file",
                      }
 
         if path.islink(self.__file):
@@ -221,7 +222,7 @@ if __name__ == "__main__":
         file: str = argv
 
         if len(file) != 2:
-            exit(f"{c.r}[!] use {file[0]} filename {c.off}")
+            exit(f"{c.r}[!] use {file[0]} [filename] {c.off}")
 
         check = Check_file(file[1])
         check.run()
