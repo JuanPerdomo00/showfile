@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+
 
 
 function root() {
@@ -10,17 +11,39 @@ function root() {
 
 root
 
-echo "installing..."
-sleep 2
-echo "copying the command to the path /usr/bin"
-sleep 2
-echo "give execute permissions"
-sleep 2
-chmod +x fileshow.py 
-cp fileshow.py /usr/bin/fileshow
-chmod +x /usr/bin/fileshow
-sleep 2
-clear
-echo "[*] the installation is finished, run the command, [fileshow] in your shell to verify"
-echo -e "\n Any complaint or contribution can be made on the github: @JuanPerdomo00"
+
+function cp_file_add_permissons() {
+    echo "============================================"
+    echo -e "\033[0;32m ${LOGNAME}\033[0m  FileShow Installer \n"
+    echo -e "Installing... to host:\033[0;32m ${HOSTNAME} \033[0m \n"
+    echo "============================================"
+    sleep 3.5
+
+    echo -e "Copying the command to the path: \033[0;32m ${PATH} \033[0m \n"
+    cp fileshow.py /usr/bin/fileshow 
+    sleep 2.6
+
+    echo -e "Give execute permissions \033[0;31m [x] \033[0m"
+    chmod u=x /usr/bin/fileshow 
+    sleep 2.9
+}
+
+
+
+
+function ok_installed() {
+    clear
+    echo -e "[*] The installation is finished, run the command: [\033[0;32mfileshow\033[0m] in your shell to verify"
+    echo -e "\n Any complaint or contribution can be made on the github: \033[0;31m@JuanPerdomo00\033[0m"
+    exit 0
+}
+
+
+function run() {
+    cp_file_add_permissons
+    ok_installed
+}
+
+run
+
 
