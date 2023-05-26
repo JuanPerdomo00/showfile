@@ -31,6 +31,20 @@ The output will provide the following information about the file:
 [![asciicast](https://asciinema.org/a/586490.svg)](https://asciinema.org/a/586490)
 
 
+
+# Test
+If you want to run the tests, you must install the requirements. Type the following command in your terminal.
+
+
+```bash
+pip3 -r install test/requirements.txt
+
+# run test
+python3 test.py
+```
+
+
+
 # License
 This project is licensed under the GPL v3 License. See the LICENSE file for more information on the license terms.
 
