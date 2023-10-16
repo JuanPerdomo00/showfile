@@ -164,6 +164,7 @@ class Check_file:
                      ".apk": "Android Package File",
                      ".ttf": "TrueType Font File",
                      ".otf": "OpenType Font file",
+                     ".zig": "Zig source code"
                      }
 
         if path.islink(self.__file):
